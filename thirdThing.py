@@ -58,6 +58,8 @@ sheet = book.active
 for m in range(1,574):
     matrix = [[0 for x in range(13)] for y in range(53)]
     matrix[0][0]='Clone'
+    for n in range(1,13):
+        matrix[0][n]=n
     
     for a in range(1,53):
         s=sheet['B'+str(a+1)]
@@ -67,7 +69,7 @@ for m in range(1,574):
             num=lettertonum(t.value[z])
             matrix[a][z+1]=dataFromCSV[m][num]
             
-    with open("C:/Users/Yekta/Desktop/staj/52x12Matrixes/RowTables/Row"+str(m)+".csv", 'w', newline='') as myfile:
+    with open("C:/Users/Yekta/Desktop/staj/52x12Matrixes(Third Approach)/RowTables/Row"+str(m)+".csv", 'w', newline='') as myfile:
         wr = csv.writer(myfile)
         wr.writerows(matrix)
 

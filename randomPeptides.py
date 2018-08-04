@@ -23,7 +23,7 @@ if __name__ == "__main__":
     turtle.hideturtle()
     turtle.speed("fastest")
     make_random_walk(10, 12000)
-    print("za")
+    print("Visualization is done")
 """
 ############################################################
 from random import randint
